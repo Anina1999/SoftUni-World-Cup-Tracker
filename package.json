@@ -1,0 +1,26 @@
+{
+  "name": "softuni-world-cup-tracker",
+  "version": "1.0.0",
+  "description": "- [x] Create repository\r  - [x] Initialize Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anina1999/SoftUni-World-Cup-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Anina1999/SoftUni-World-Cup-Tracker/issues"
+  },
+  "homepage": "https://github.com/Anina1999/SoftUni-World-Cup-Tracker#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-handlebars": "^9.0.1"
+  }
+}
