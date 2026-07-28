@@ -12,4 +12,8 @@
  - [x] Render Home Page
  - [x] Setup Static files
 
+## Architecture and dynamic rendering
+ - [x] Add Home Controller
+ - [ ] Add routes
+
 
