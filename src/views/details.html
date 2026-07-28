@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./static/styles/styles.css" />
+  <title>Match Details — WC 2026</title>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <div style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;letter-spacing:2px;color:#FFD700;">⚽ WC 2026</div>
+      <nav>
+        <div><a href="#">Home</a><a href="#">Dashboard</a><a href="#">Report</a></div>
+        <div class="user"><a href="#">Add Match</a><a href="#">Logout</a></div>
+        <div class="guest"><a href="#">Login</a><a href="#">Register</a></div>
+      </nav>
+    </header>
+    <main class="details">
+      <section id="details">
+        <div id="details-wrapper">
+          <p id="details-title">Brazil vs Argentina</p>
+          <div id="img-wrapper">
+            <img src="./static/images/match1.webp" alt="Match" />
+          </div>
+          <div id="info-wrapper">
+            <table>
+              <tr>
+                <td><p><strong>Home Team</strong><span id="details-home-team">Brazil</span></p></td>
+                <td><p><strong>Score</strong><span id="details-score">3 - 2</span></p></td>
+                <td><p><strong>Away Team</strong><span id="details-away-team">Argentina</span></p></td>
+              </tr>
+              <tr>
+                <td><p><strong>Stage</strong><span id="details-stage">Group Stage</span></p></td>
+                <td><p><strong>Venue</strong><span id="details-venue">MetLife Stadium, New York</span></p></td>
+                <td><p><strong>Date</strong><span id="details-date">18/06/2026</span></p></td>
+              </tr>
+            </table>
+            <p>
+              <strong>Match Report</strong>
+              <span id="details-description">An electrifying South American derby that kept fans on the edge of their seats. Brazil scored twice in the first half through a stunning free kick and a counter-attack goal. Argentina fought back brilliantly in the second half, levelling at 2-2, before Brazil sealed the win with a penalty in injury time.</span>
+            </p>
+          </div>
+          <div id="action-buttons">
+            <a href="#" id="edit-btn">✏️ Edit</a>
+            <a href="#" id="delete-btn">🗑️ Delete</a>
+            <a href="#" id="like-btn">⭐ Like</a>
+            <!-- <p id="already-liked">⭐ You already liked this match!</p> -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>World Cup 2026 Tracker &copy; SoftUni JS Back-End Exam 2026</footer>
+  </div>
+</body>
+</html>

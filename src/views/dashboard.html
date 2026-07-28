@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./static/styles/styles.css" />
+  <title>Dashboard — WC 2026</title>
+</head>
+<body>
+  <div id="wrapper">
+    <header>
+      <div style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;letter-spacing:2px;color:#FFD700;">⚽ WC 2026</div>
+      <nav>
+        <div><a href="#">Home</a><a href="#">Dashboard</a><a href="#">Report</a></div>
+        <div class="user"><a href="#">Add Match</a><a href="#">Logout</a></div>
+        <div class="guest"><a href="#">Login</a><a href="#">Register</a></div>
+      </nav>
+    </header>
+    <main class="dashboard">
+      <section id="dashboard">
+        <h2>All Matches</h2>
+        <ul class="card-wrapper">
+          <li class="card">
+            <img src="./static/images/match1.webp" alt="Match"/>
+            <p class="score">3 - 2</p>
+            <p><strong>Home:</strong> <span class="home-team">Brazil</span></p>
+            <p><strong>Away:</strong> <span class="away-team">Argentina</span></p>
+            <p><strong>Stage:</strong> <span class="stage">Group Stage</span></p>
+            <a class="details-btn" href="#">Details</a>
+          </li>
+          <li class="card">
+            <img src="./static/images/match2.webp" alt="Match"/>
+            <p class="score">1 - 1</p>
+            <p><strong>Home:</strong> <span class="home-team">France</span></p>
+            <p><strong>Away:</strong> <span class="away-team">Germany</span></p>
+            <p><strong>Stage:</strong> <span class="stage">Quarter-final</span></p>
+            <a class="details-btn" href="#">Details</a>
+          </li>
+          <li class="card">
+            <img src="./static/images/match3.webp" alt="Match"/>
+            <p class="score">2 - 0</p>
+            <p><strong>Home:</strong> <span class="home-team">Spain</span></p>
+            <p><strong>Away:</strong> <span class="away-team">England</span></p>
+            <p><strong>Stage:</strong> <span class="stage">Semi-final</span></p>
+            <a class="details-btn" href="#">Details</a>
+          </li>
+          <li class="card">
+            <img src="./static/images/match4.webp" alt="Match"/>
+            <p class="score">4 - 3</p>
+            <p><strong>Home:</strong> <span class="home-team">Portugal</span></p>
+            <p><strong>Away:</strong> <span class="away-team">Netherlands</span></p>
+            <p><strong>Stage:</strong> <span class="stage">Round of 16</span></p>
+            <a class="details-btn" href="#">Details</a>
+          </li>
+        </ul>
+        <!-- <div id="no-post"><h2>There are no matches yet!</h2></div> -->
+      </section>
+    </main>
+    <footer>World Cup 2026 Tracker &copy; SoftUni JS Back-End Exam 2026</footer>
+  </div>
+</body>
+</html>
