@@ -8,5 +8,7 @@
  - [x] Add .gitignore
  - [x] Add resources
  - [x] Setup express handlebars
+ - [x] Add Layout
+ - [ ] Render Home Page
 
 
