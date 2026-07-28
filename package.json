@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Anina1999/SoftUni-World-Cup-Tracker#readme",
   "dependencies": {
     "express": "^5.2.1",
-    "express-handlebars": "^9.0.1"
+    "express-handlebars": "^9.0.1",
+    "zod": "^4.4.3"
   }
 }
