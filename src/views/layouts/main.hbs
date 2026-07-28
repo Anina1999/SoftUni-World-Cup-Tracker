@@ -7,7 +7,13 @@
   <title>World Cup 2026</title>
 </head>
 <body>
-  <!-- <div><div class="errorContainer"><p>Error message</p></div></div> -->
+{{#if err}}
+<div>
+    <div class="errorContainer">
+        <p>{{err}}</p>
+    </div>
+</div>
+{{/if}}
   <div id="wrapper">
     <header>
       <div style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;letter-spacing:2px;color:#FFD700;">⚽ WC 2026</div>

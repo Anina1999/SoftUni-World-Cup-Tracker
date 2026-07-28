@@ -21,4 +21,5 @@
  - [x] Add register page
  - [x] Add Body Parser Middleware
  - [x] Add validation to register using Zod `npm i zod`
+ - [x] Add Error Handling and show error to user
 

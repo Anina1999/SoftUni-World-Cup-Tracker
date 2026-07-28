@@ -1,4 +1,5 @@
 import { createUserSchema } from "../schemas/auth.schema.js";
+import { getErrorMessage } from "../utils/error.utils.js";
 
 export function getRegisterPage(req, res) {
     res.render('auth/register');
@@ -12,7 +13,7 @@ export function register(req, res) {
         //Call auth service to create user (not implemented yet)
         res.redirect('/');
     } catch (err) {
-        console.log(err);
-        return res.status(404).send(err.errors)
+        const errorMessage = getErrorMessage(err);
+        res.status(400).render('auth/register', { err: errorMessage });
     }
 }
