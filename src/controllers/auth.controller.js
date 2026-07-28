@@ -5,10 +5,11 @@ export function getRegisterPage(req, res) {
     res.render('auth/register');
 }
 
-export function register(req, res) {
+export async function register(req, res) {
 
     try {
-        const userData = createUserSchema.parse(req.body);
+        const userData = await createUserSchema.parseAsync(req.body);
+        console.log('Validated and transformed user data:', userData);
 
         //Call auth service to create user (not implemented yet)
         res.redirect('/');
