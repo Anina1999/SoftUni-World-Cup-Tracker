@@ -16,4 +16,8 @@
  - [x] Add Home Controller
  - [x] Add routes
 
+## Authentication and Authorization
+ - [x] Add Auth Controller
+ - [x] Add register page
+
 
