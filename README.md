@@ -7,5 +7,6 @@
  - [x] Add Express Server and Express Handlebars  `npm i express express-handlebars`
  - [x] Add .gitignore
  - [x] Add resources
+ - [x] Setup express handlebars
 
 
