@@ -14,6 +14,6 @@ export function register(req, res) {
         res.redirect('/');
     } catch (err) {
         const errorMessage = getErrorMessage(err);
-        res.status(400).render('auth/register', { err: errorMessage });
+        res.status(400).render('auth/register', { err: errorMessage, user: req.body });
     }
 }
