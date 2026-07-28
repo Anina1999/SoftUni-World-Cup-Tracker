@@ -19,5 +19,6 @@
 ## Authentication and Authorization
  - [x] Add Auth Controller
  - [x] Add register page
+ - [x] Add Body Parser Middleware
 
 
