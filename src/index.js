@@ -10,6 +10,8 @@ app.engine('hbs', engine({
 app.set('view engine', 'hbs');
 app.set('views', 'src/views');
 
+//Setup static files
+app.use(express.static('src/public'));
 
 //Routes
 app.get('/', (req, res) => {

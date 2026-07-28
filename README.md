@@ -10,5 +10,6 @@
  - [x] Setup express handlebars
  - [x] Add Layout
  - [x] Render Home Page
+ - [x] Setup Static files
 
 
