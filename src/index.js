@@ -13,7 +13,7 @@ app.set('views', 'src/views');
 
 //Routes
 app.get('/', (req, res) => {
-    res.send('Hello World!!!');
+    res.render('home');
 });
 
 app.listen(3000, () => {
