@@ -14,6 +14,6 @@
 
 ## Architecture and dynamic rendering
  - [x] Add Home Controller
- - [ ] Add routes
+ - [x] Add routes
 
 
