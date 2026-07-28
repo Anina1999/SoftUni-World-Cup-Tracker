@@ -4,8 +4,8 @@
   "description": "- [x] Create repository\r  - [x] Initialize Project",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "node --watch src/index.js"
+    "start": "tsx src/index.js",
+    "dev": "tsx --watch src/index.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,20 @@
   },
   "homepage": "https://github.com/Anina1999/SoftUni-World-Cup-Tracker#readme",
   "dependencies": {
+    "@prisma/adapter-pg": "^7.9.1",
+    "@prisma/client": "^7.9.1",
     "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "express-handlebars": "^9.0.1",
+    "pg": "^8.22.0",
     "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "@types/pg": "^8.20.0",
+    "prisma": "^7.9.1",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
   }
 }
