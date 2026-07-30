@@ -2,6 +2,7 @@ import express from 'express';
 import { engine } from 'express-handlebars';
 import cookieParser from 'cookie-parser';
 import routes from './routes.js';
+import { authMiddleware } from './middlewares/auth.middleware.js';
 
 const app = express();
 
@@ -20,6 +21,9 @@ app.use(express.urlencoded());
 
 //Add cookie parsing middleware
 app.use(cookieParser());
+
+//Auth middleware
+app.use(authMiddleware);
 
 //Routes
 app.use(routes);

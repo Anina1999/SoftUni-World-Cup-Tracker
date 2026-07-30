@@ -13,9 +13,29 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(cuid())
-  email     String   @unique
-  password  String
+  id       String @id @default(cuid())
+  email    String @unique
+  password String
+
+  matches Match[]
 
   @@map("users")
+}
+
+model Match {
+  id          String @id @default(cuid())
+  homeTeam    String
+  awayTeam    String
+  homeGoals   Int
+  awayGoals   Int
+  stage       String
+  venue       String
+  date        String
+  imageUrl    String
+  description String
+  userId      String
+
+  owner User @relation(fields: [userId], references: [id])
+
+  @@map("matches")
 }

@@ -19,6 +19,7 @@
 
  - [x] Add Match Controller
  - [x] Add Match Page
+ - [x] Add Match Service
 
 ## Authentication and Authorization
 ### Register 
@@ -49,5 +50,9 @@
 - [x] Add Auth Middleware
 - [x] Add isAuth Middleware
 - [x] Add isAuth, isGuest guard to routes
+- [x] Use auth middleware in index.js
 
 ## Create Match
+- [x] Add isAuth to Match Page
+- [x] Validate Match Data
+

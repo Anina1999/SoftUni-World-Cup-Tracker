@@ -4,13 +4,13 @@
       <h2>⚽ Add Match</h2>
       <form class="create-form" method="POST">
         <label>Home Team</label>
-        <input type="text" id="home-team" name="homeTeam" placeholder="e.g. Brazil" />
+        <input type="text" id="home-team" name="homeTeam" value="{{match.homeTeam}}" placeholder="e.g. Brazil" />
         <label>Away Team</label>
-        <input type="text" id="away-team" name="awayTeam" placeholder="e.g. Argentina" />
+        <input type="text" id="away-team" name="awayTeam" value="{{match.awayTeam}}" placeholder="e.g. Argentina" />
         <label>Home Goals</label>
-        <input type="number" id="home-goals" name="homeGoals" placeholder="0" min="0" />
+        <input type="number" id="home-goals" name="homeGoals" value="{{match.homeGoals}}" placeholder="0" min="0" />
         <label>Away Goals</label>
-        <input type="number" id="away-goals" name="awayGoals" placeholder="0" min="0" />
+        <input type="number" id="away-goals" name="awayGoals" value="{{match.awayGoals}}" placeholder="0" min="0" />
         <label>Stage</label>
         <select id="stage" name="stage">
           <option value="">Select stage...</option>
@@ -21,13 +21,13 @@
           <option>Final</option>
         </select>
         <label>Venue</label>
-        <input type="text" id="venue" name="venue" placeholder="e.g. MetLife Stadium, New York" />
+        <input type="text" id="venue" name="venue" value="{{match.venue}}" placeholder="e.g. MetLife Stadium, New York" />
         <label>Match Date</label>
-        <input type="text" id="date" name="date" placeholder="DD/MM/YYYY" />
+        <input type="text" id="date" name="date" value="{{match.date}}" placeholder="DD/MM/YYYY" />
         <label>Image URL</label>
-        <input type="text" id="obs-img" name="imageUrl" placeholder="https://..." />
+        <input type="text" id="obs-img" name="imageUrl" value="{{match.imageUrl}}" placeholder="https://..." />
         <label>Match Report</label>
-        <textarea id="description" name="description" placeholder="Describe the match..."></textarea>
+        <textarea id="description" name="description" placeholder="Describe the match...">{{match.description}}</textarea>
         <button type="submit">Add Match</button>
       </form>
     </div>
