@@ -20,5 +20,19 @@ export async function create(req, res) {
         const errorMessage = getErrorMessage(err)
         return res.status(500).render('match/create', { err: errorMessage, match: req.body });
     }
+}
 
+export async function getDashboardPage(req, res) {
+    const matches = await matchService.getAll();
+    res.render('match/dashboard', { matches });
+}
+
+export async function showDetailsPage(req, res) {
+    const matchId = req.params.matchId;
+    const match = await matchService.getById(matchId);
+
+    if (!match) {
+        return res.status(404).render('404', { error: 'No match found' });
+    }
+    res.render('match/details');
 }

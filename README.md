@@ -21,6 +21,9 @@
  - [x] Add Match Page
  - [x] Add Match Service
 
+ - [x] Add Dashboard Page
+ - [x] Add Details Page
+
 ## Authentication and Authorization
 ### Register 
  - [x] Add register page
@@ -56,3 +59,8 @@
 - [x] Add isAuth to Match Page
 - [x] Validate Match Data
 
+## Show Dashboard Page
+- [x] Render Dynamic Matches
+
+## Show Details Page
+- [x] Render Details Page

@@ -1,0 +1,18 @@
+<main class="dashboard">
+  <section id="dashboard">
+    <h2>All Matches</h2>
+    <ul class="card-wrapper">
+      {{#each matches}}
+      <li class="card">
+        <img src="{{imageUrl}}" alt="Match" />
+        <p class="score">{{homeGoals}} - {{awayGoals}}</p>
+        <p><strong>Home:</strong> <span class="home-team">{{homeTeam}}</span></p>
+        <p><strong>Away:</strong> <span class="away-team">{{awayTeam}}</span></p>
+        <p><strong>Stage:</strong> <span class="stage">{{stage}}</span></p>
+        <a class="details-btn" href="/match/{{id}}/details">Details</a>
+      </li>
+      {{/each}}
+    </ul>
+    <!-- <div id="no-post"><h2>There are no matches yet!</h2></div> -->
+  </section>
+</main>

@@ -17,6 +17,8 @@ routes.get('/auth/logout', isAuth, authController.logout);
 routes.get('/match/create', isAuth, matchController.getMatchPage); 
 routes.post('/match/create', isAuth, matchController.create); 
 
-routes.post('/match/dashboard', matchController.create);
+routes.get('/match/dashboard', matchController.getDashboardPage);
+
+routes.get('/match/:matchId/details', matchController.showDetailsPage);
 
 export default routes;
