@@ -25,3 +25,7 @@ export async function register(req, res) {
         res.status(400).render('auth/register', { err: errorMessage, user: req.body });
     }
 }
+
+export function getLoginPage(req, res) {
+    res.render('auth/login');
+}

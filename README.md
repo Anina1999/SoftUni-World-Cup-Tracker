@@ -15,9 +15,11 @@
 ## Architecture and dynamic rendering
  - [x] Add Home Controller
  - [x] Add routes
+ - [x] Add Auth Controller
+
 
 ## Authentication and Authorization
- - [x] Add Auth Controller
+### Register 
  - [x] Add register page
  - [x] Add Body Parser Middleware
  - [x] Add validation to register using Zod `npm i zod`
@@ -31,5 +33,9 @@
  - [x] Install JWT `npm i jsonwebtoken`
  - [x] Install Cookie Parser `npm i cookie-parser`
  - [x] Redirect to home page after successful registration      
+
+### Login
+- [x] Add Login Page
+- [ ] Add Login Post action
 
 
