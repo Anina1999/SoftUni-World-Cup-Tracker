@@ -63,4 +63,4 @@
 - [x] Render Dynamic Matches
 
 ## Show Details Page
-- [x] Render Details Page
+- [x] Render Dynamic Details Page

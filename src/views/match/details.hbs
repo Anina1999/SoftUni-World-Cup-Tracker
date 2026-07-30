@@ -1,7 +1,7 @@
 <main class="details">
   <section id="details">
     <div id="details-wrapper">
-      <p id="details-title">Brazil vs Argentina</p>
+      <p id="details-title">{{match.homeTeam}} vs {{match.awayTeam}}</p>
       <div id="img-wrapper">
         <img src="/images/match1.webp" alt="Match" />
       </div>
@@ -9,33 +9,30 @@
         <table>
           <tr>
             <td>
-              <p><strong>Home Team</strong><span id="details-home-team">Brazil</span></p>
+              <p><strong>Home Team</strong><span id="details-home-team">{{match.homeTeam}}</span></p>
             </td>
             <td>
-              <p><strong>Score</strong><span id="details-score">3 - 2</span></p>
+              <p><strong>Score</strong><span id="details-score">{{match.homeGoals}} - {{match.awayGoals}}</span></p>
             </td>
             <td>
-              <p><strong>Away Team</strong><span id="details-away-team">Argentina</span></p>
+              <p><strong>Away Team</strong><span id="details-away-team">{{match.awayTeam}}</span></p>
             </td>
           </tr>
           <tr>
             <td>
-              <p><strong>Stage</strong><span id="details-stage">Group Stage</span></p>
+              <p><strong>Stage</strong><span id="details-stage">{{match.stage}}</span></p>
             </td>
             <td>
-              <p><strong>Venue</strong><span id="details-venue">MetLife Stadium, New York</span></p>
+              <p><strong>Venue</strong><span id="details-venue">{{match.venue}}</span></p>
             </td>
             <td>
-              <p><strong>Date</strong><span id="details-date">18/06/2026</span></p>
+              <p><strong>Date</strong><span id="details-date">{{match.date}}</span></p>
             </td>
           </tr>
         </table>
         <p>
           <strong>Match Report</strong>
-          <span id="details-description">An electrifying South American derby that kept fans on the edge of their seats.
-            Brazil scored twice in the first half through a stunning free kick and a counter-attack goal. Argentina
-            fought back brilliantly in the second half, levelling at 2-2, before Brazil sealed the win with a penalty in
-            injury time.</span>
+          <span id="details-description">{{match.description}}</span>
         </p>
       </div>
       <div id="action-buttons">

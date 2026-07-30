@@ -34,5 +34,5 @@ export async function showDetailsPage(req, res) {
     if (!match) {
         return res.status(404).render('404', { error: 'No match found' });
     }
-    res.render('match/details');
+    res.render('match/details', {match});
 }
