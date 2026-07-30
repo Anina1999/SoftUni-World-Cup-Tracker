@@ -11,8 +11,11 @@
         <p><strong>Stage:</strong> <span class="stage">{{stage}}</span></p>
         <a class="details-btn" href="/match/{{id}}/details">Details</a>
       </li>
+      {{else}}
+      <div id="no-post">
+        <h2>There are no matches yet!</h2>
+      </div>
       {{/each}}
     </ul>
-    <!-- <div id="no-post"><h2>There are no matches yet!</h2></div> -->
   </section>
 </main>
