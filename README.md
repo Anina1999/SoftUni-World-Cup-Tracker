@@ -17,8 +17,8 @@
  - [x] Add routes
  - [x] Add Auth Controller
 
- - [ ] Add Match Page
-
+ - [x] Add Match Controller
+ - [x] Add Match Page
 
 ## Authentication and Authorization
 ### Register 
@@ -49,6 +49,5 @@
 - [x] Add Auth Middleware
 - [x] Add isAuth Middleware
 - [x] Add isAuth, isGuest guard to routes
-
 
 ## Create Match
