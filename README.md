@@ -70,3 +70,10 @@
 
 ## Dynamic Navigation
 - [x] Show dynamic navigation based on user session
+
+## Like Functionality
+- [x] Add hitLike function in controller
+- [x] Add hitLike function in service
+- [x] Create M2M relation 
+- [x] Include like function
+- [x] Render a message if already liked by user

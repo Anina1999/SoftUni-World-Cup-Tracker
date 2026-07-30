@@ -18,6 +18,7 @@ model User {
   password String
 
   matches Match[]
+  likes   Match[] @relation("MatchLikes")
 
   @@map("users")
 }
@@ -35,7 +36,8 @@ model Match {
   description String
   userId      String
 
-  owner User @relation(fields: [userId], references: [id])
+  owner   User   @relation(fields: [userId], references: [id])
+  likedBy User[] @relation("MatchLikes")
 
   @@map("matches")
 }

@@ -20,5 +20,6 @@ routes.post('/match/create', isAuth, matchController.create);
 routes.get('/match/dashboard', matchController.getDashboardPage);
 
 routes.get('/match/:matchId/details', matchController.showDetailsPage);
+routes.get('/match/:matchId/like', matchController.hitLike);
 
 export default routes;

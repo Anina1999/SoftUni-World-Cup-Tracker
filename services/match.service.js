@@ -21,8 +21,26 @@ export async function getById(matchId) {
     const result = await prisma.match.findUnique({
         where: {
             id: matchId
-        }
+        },
+        include: {
+            likedBy: true,
+        },
     });
 
     return result;
+}
+
+export function hitLike(matchId, userId) {
+    return prisma.match.update({
+        where: {
+            id: matchId
+        },
+        data: {
+            likedBy: {
+                connect: {
+                    id: userId,
+                }
+            }
+        }
+    })
 }

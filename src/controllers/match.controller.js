@@ -37,6 +37,23 @@ export async function showDetailsPage(req, res) {
     }
 
     const isOwner = match.userId === userId;
+    const hasLiked = match.likedBy.some(user => user.id === userId)
 
-    res.render('match/details', { match, isOwner });
+    res.render('match/details', { match, isOwner, hasLiked });
+}
+
+export async function hitLike(req, res) {
+    const matchId = req.params.matchId;
+    const userId = req.user.id;
+
+    try {
+        await matchService.hitLike(matchId, userId);
+
+        res.redirect(`/match/${matchId}/details`);
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+
+        return res.status(400).render('404', { err: errorMessage });
+    }
+
 }
