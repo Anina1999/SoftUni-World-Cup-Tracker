@@ -36,13 +36,15 @@
         </p>
       </div>
       <div id="action-buttons">
-
-        {{#if isOwner}}
-        <a href="#" id="edit-btn">✏️ Edit</a>
-        <a href="#" id="delete-btn">🗑️ Delete</a>
+        {{#if user}}
+          {{#if isOwner}}
+          <a href="#" id="edit-btn">✏️ Edit</a>
+          <a href="#" id="delete-btn">🗑️ Delete</a>
+          {{else}}
+          <a href="#" id="like-btn">⭐ Like</a>
+          <!-- <p id="already-liked">⭐ You already liked this match!</p> -->
+          {{/if}}
         {{/if}}
-        <a href="#" id="like-btn">⭐ Like</a>
-        <!-- <p id="already-liked">⭐ You already liked this match!</p> -->
       </div>
     </div>
   </section>
