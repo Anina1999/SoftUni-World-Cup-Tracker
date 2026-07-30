@@ -66,3 +66,6 @@
 ## Show Details Page
 - [x] Render Dynamic Details Page
 - [x] Show Edit, Delete buttons in Details Page if owner
+
+## Dynamic Navigation
+- [x] Show dynamic navigation based on user session
