@@ -1,5 +1,6 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
+import cookieParser from 'cookie-parser';
 import routes from './routes.js';
 
 const app = express();
@@ -16,6 +17,9 @@ app.use(express.static('src/public'));
 
 //Add body parsing middleware
 app.use(express.urlencoded());
+
+//Add cookie parsing middleware
+app.use(cookieParser());
 
 //Routes
 app.use(routes);

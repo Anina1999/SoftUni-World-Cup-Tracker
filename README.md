@@ -27,4 +27,9 @@
  - [x] Change node with tsx
  - [x] Add user model
  - [x] Fix prisma client path
+ - [x] Register user in database
+ - [x] Install JWT `npm i jsonwebtoken`
+ - [x] Install Cookie Parser `npm i cookie-parser`
+ - [x] Redirect to home page after successful registration      
+
 

@@ -1,5 +1,7 @@
+import { authService } from "../../services/index.js";
 import { createUserSchema } from "../schemas/auth.schema.js";
 import { getErrorMessage } from "../utils/error.utils.js";
+import { createAuthToken } from "../utils/tokenUtils.js";
 
 export function getRegisterPage(req, res) {
     res.render('auth/register');
@@ -11,7 +13,12 @@ export async function register(req, res) {
         const userData = await createUserSchema.parseAsync(req.body);
         console.log('Validated and transformed user data:', userData);
 
-        //Call auth service to create user (not implemented yet)
+        const result = await authService.register(userData);
+
+        const token = createAuthToken(result);
+
+        res.cookie('auth', token, { httpOnly: true });
+
         res.redirect('/');
     } catch (err) {
         const errorMessage = getErrorMessage(err);

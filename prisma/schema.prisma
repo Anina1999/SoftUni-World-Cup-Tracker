@@ -17,5 +17,5 @@ model User {
   email     String   @unique
   password  String
 
-  @@map("user")
+  @@map("users")
 }
