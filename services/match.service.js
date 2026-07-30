@@ -44,3 +44,13 @@ export function hitLike(matchId, userId) {
         }
     })
 }
+
+export function getRecents() {
+    //better with createdAt if in schema
+    return prisma.match.findMany({
+        orderBy: {
+            id: 'desc',
+        },
+        take: 3,
+    });
+}

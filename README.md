@@ -74,6 +74,9 @@
 ## Like Functionality
 - [x] Add hitLike function in controller
 - [x] Add hitLike function in service
-- [x] Create M2M relation 
+- [x] Create M2M implicit relation 
 - [x] Include like function
 - [x] Render a message if already liked by user
+
+## Home page
+- [x] Render dynamic recent matches
