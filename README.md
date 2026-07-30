@@ -17,6 +17,8 @@
  - [x] Add routes
  - [x] Add Auth Controller
 
+ - [ ] Add Match Page
+
 
 ## Authentication and Authorization
 ### Register 
@@ -42,6 +44,11 @@
 
 ### Logout
 - [x] Add Logout Function in Auth Service
-- [ ] Add Auth Middleware
+
+### Middlewares
+- [x] Add Auth Middleware
+- [x] Add isAuth Middleware
+- [x] Add isAuth, isGuest guard to routes
 
 
+## Create Match

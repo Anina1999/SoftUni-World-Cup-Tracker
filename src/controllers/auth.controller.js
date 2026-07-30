@@ -47,7 +47,7 @@ export async function login(req, res) {
     }
 }
 
-export function logout(req, res) {
+export function logout (req, res) {
     res.clearCookie('auth');
     res.redirect('/');
 }
