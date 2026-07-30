@@ -25,5 +25,6 @@
  - [x] Hash password with zod transform and bcrypt `npm i bcrypt`
  - [x] Setup prisma orm database https://www.prisma.io/docs/prisma-orm/quickstart/prisma-postgres
  - [x] Change node with tsx
- - [ ] Add user model
+ - [x] Add user model
+ - [x] Fix prisma client path
 
