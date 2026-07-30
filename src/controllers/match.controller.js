@@ -29,10 +29,14 @@ export async function getDashboardPage(req, res) {
 
 export async function showDetailsPage(req, res) {
     const matchId = req.params.matchId;
+    const userId = req?.user?.id; 
     const match = await matchService.getById(matchId);
 
     if (!match) {
         return res.status(404).render('404', { error: 'No match found' });
     }
-    res.render('match/details', {match});
+
+    const isOwner = match.userId === userId;
+
+    res.render('match/details', { match, isOwner });
 }
