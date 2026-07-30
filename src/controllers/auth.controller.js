@@ -29,3 +29,20 @@ export async function register(req, res) {
 export function getLoginPage(req, res) {
     res.render('auth/login');
 }
+
+export async function login(req, res) {
+    try {
+        const { email, password } = req.body;
+        const user = await authService.login(email, password);
+
+        const token = createAuthToken(user);
+
+        res.cookie('auth', token, { httpOnly: true });
+
+        res.redirect('/');
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+
+        res.status(400).render('auth/login', { err: errorMessage, user: req.body });
+    }
+}

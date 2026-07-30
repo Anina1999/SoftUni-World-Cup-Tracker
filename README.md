@@ -29,6 +29,7 @@
  - [x] Change node with tsx
  - [x] Add user model
  - [x] Fix prisma client path
+ - [x] Add Auth service
  - [x] Register user in database
  - [x] Install JWT `npm i jsonwebtoken`
  - [x] Install Cookie Parser `npm i cookie-parser`
@@ -36,6 +37,7 @@
 
 ### Login
 - [x] Add Login Page
-- [ ] Add Login Post action
+- [x] Add Login function in Auth Service
+- [x] Add Login Post action
 
 
