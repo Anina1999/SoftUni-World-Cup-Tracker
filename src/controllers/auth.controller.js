@@ -46,3 +46,8 @@ export async function login(req, res) {
         res.status(400).render('auth/login', { err: errorMessage, user: req.body });
     }
 }
+
+export function logout(req, res) {
+    res.clearCookie('auth');
+    res.redirect('/');
+}

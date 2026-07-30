@@ -40,4 +40,8 @@
 - [x] Add Login function in Auth Service
 - [x] Add Login Post action
 
+### Logout
+- [x] Add Logout Function in Auth Service
+- [ ] Add Auth Middleware
+
 
