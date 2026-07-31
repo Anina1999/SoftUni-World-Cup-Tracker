@@ -23,6 +23,7 @@ routes.get('/match/:matchId/details', matchController.showDetailsPage);
 routes.get('/match/:matchId/like', isAuth, matchController.hitLike);
 
 routes.get('/match/:matchId/edit', isAuth, matchController.getEditPage);
+routes.post('/match/:matchId/edit', isAuth, matchController.updateMatch);
 
 routes.get('/match/:matchId/delete', isAuth, matchController.removeMatch);
 

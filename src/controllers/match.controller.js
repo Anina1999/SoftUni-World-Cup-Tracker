@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getErrorMessage } from "../utils/error.utils";
+import { getErrorMessage } from "../utils/error.utils.js";
 import { createMatchSchema } from "../schemas/match.schema.js";
 import { matchService } from "../../services/index.js";
 
@@ -87,4 +87,28 @@ export async function getEditPage(req, res) {
     }
 
     res.render('match/edit', { match });
+}
+
+export async function updateMatch(req, res) {
+    const matchId = req.params.matchId;
+    const userId = req.user.id;
+
+    const match = await matchService.getById(matchId);
+    const isOwner = match.userId === userId;
+
+    if (!isOwner) {
+        return res.status(403).render('404', { error: 'You are not authorized to edit this match' });
+    }
+
+    try {
+        const matchData = createMatchSchema.parse(req.body);
+
+        await matchService.update(matchId, matchData, userId);
+
+        res.redirect(`/match/${matchId}/details`);  
+    } catch (err) {
+        const errorMessage = getErrorMessage(err);
+
+        return res.status(400).render('match/edit', { err: errorMessage, match: req.body });
+    }
 }

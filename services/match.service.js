@@ -63,3 +63,13 @@ export function removeMatchById(matchId, userId) {
         }
     });
 }
+
+export async function update(matchId, matchData, userId) {
+ return prisma.match.update({
+    where: {
+        id: matchId,
+        userId,
+    },
+    data: matchData,
+ })
+}
