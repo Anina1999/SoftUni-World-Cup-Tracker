@@ -17,9 +17,12 @@
         </div>
       </li>
       {{else}}
-      <h2 id="no-post">There are no matches yet!</h2>
+        {{#if hasError}}
+        <h2 id="no-post">Error loading top scored matches!</h2>
+        {{else}}
+        <h2 id="no-post">There are no matches yet!</h2>
+        {{/if}}
       {{/each}}
     </ul>
-    <!-- <h2 id="no-post">Error loading top scored matches!</h2> -->
   </section>
 </main>

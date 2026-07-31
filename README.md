@@ -96,5 +96,5 @@
 - [x] Create Api Controller
 - [x] Add route for top scored matches
 - [x] Render Report Page with hardcoded data
-- [ь] Connect Report Page to top-scored API (replace hardcoded data)
-- [ ] Add error handling to API controller
+- [x] Connect Report Page to top-scored API (replace hardcoded data)
+- [x] Add error handling to API controller

@@ -115,7 +115,10 @@ export async function updateMatch(req, res) {
 }
 
 export async function getReportPage(req, res) {
-    const topScoredMatches = await matchService.getTopScoredMatches();
-
-    res.render('match/report', { matches: topScoredMatches });
+    try {
+        const topScoredMatches = await matchService.getTopScoredMatches();
+        res.render('match/report', { matches: topScoredMatches });
+    } catch (err) {
+        res.status(500).render('match/report', { hasError: true });
+    }
 }
