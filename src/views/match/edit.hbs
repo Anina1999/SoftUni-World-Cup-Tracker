@@ -1,0 +1,34 @@
+<main class="edit">
+  <section id="edit">
+    <div class="form">
+      <h2>✏️ Edit Match</h2>
+      <form class="edit-form" method="POST">
+        <label>Home Team</label>
+        <input type="text" id="home-team" name="homeTeam" value="{{match.homeTeam}}" />
+        <label>Away Team</label>
+        <input type="text" id="away-team" name="awayTeam" value="{{match.awayTeam}}" />
+        <label>Home Goals</label>
+        <input type="number" id="home-goals" name="homeGoals" value="{{match.homeGoals}}" min="0" />
+        <label>Away Goals</label>
+        <input type="number" id="away-goals" name="awayGoals" value="{{match.awayGoals}}" min="0" />
+        <label>Stage</label>
+        <select id="stage" name="stage">
+          <option selected>{{match.stage}}</option>
+          <option>Round of 16</option>
+          <option>Quarter-final</option>
+          <option>Semi-final</option>
+          <option>Final</option>
+        </select>
+        <label>Venue</label>
+        <input type="text" id="venue" name="venue" value="{{match.venue}}" />
+        <label>Match Date</label>
+        <input type="text" id="date" name="date" value="{{match.date}}" />
+        <label>Image URL</label>
+        <input type="text" id="obs-img" name="imageUrl" value="{{match.imageUrl}}" />
+        <label>Match Report</label>
+        <textarea id="description" name="description">{{match.description}}</textarea>
+        <button type="submit">Save Changes</button>
+      </form>
+    </div>
+  </section>
+</main>

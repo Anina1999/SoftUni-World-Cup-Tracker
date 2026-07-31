@@ -74,3 +74,11 @@ export async function removeMatch(req, res) {
 
     res.redirect('/match/dashboard');
 }
+
+export async function getEditPage(req, res) {
+    res.render('match/edit');
+}
+
+export async function editMatch(req, res) {
+
+}

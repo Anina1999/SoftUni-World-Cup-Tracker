@@ -85,3 +85,5 @@
 - [x] Delete functionality
 
 ## Edit Match
+- [x] Add isAuth to Edit Page
+- [x] Add Edit Page with pre-filled form fields
