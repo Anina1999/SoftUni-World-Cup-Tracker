@@ -6,7 +6,19 @@ import { matchService } from "../../services/index.js";
 const matchController = Router();
 
 export function getMatchPage(req, res) {
-    res.render('match/create');
+    const stageOptions = getStageOptions();
+    res.render('match/create', { stageOptions })
+}
+
+function getStageOptions(match = {}) {
+    const stages = ['Group Stage', 'Round of 16', 'Quarter-finals', 'Semi-finals', 'Final']
+    
+    const options = stages.map(stage => ({
+        value: stage,
+        selected: match.stage === stage? 'selected' : '',
+    }));
+
+    return options;
 }
 
 export async function create(req, res) {
@@ -17,8 +29,10 @@ export async function create(req, res) {
         await matchService.create(matchData, userId);
         res.redirect('/match/dashboard');
     } catch (err) {
-        const errorMessage = getErrorMessage(err)
-        return res.status(500).render('match/create', { err: errorMessage, match: req.body });
+        const errorMessage = getErrorMessage(err);
+        const stageOptions = getStageOptions(req.body);
+
+        return res.status(500).render('match/create', { err: errorMessage, match: req.body, stageOptions });
     }
 }
 

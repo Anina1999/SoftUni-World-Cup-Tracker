@@ -58,6 +58,7 @@
 ## Create Match
 - [x] Add isAuth to Match Page
 - [x] Validate Match Data
+- [x] Add Get Stage Options
 
 ## Show Dashboard Page
 - [x] Render Dynamic Matches

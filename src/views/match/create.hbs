@@ -14,11 +14,9 @@
         <label>Stage</label>
         <select id="stage" name="stage">
           <option value="">Select stage...</option>
-          <option>Group Stage</option>
-          <option>Round of 16</option>
-          <option>Quarter-final</option>
-          <option>Semi-final</option>
-          <option>Final</option>
+          {{#each stageOptions}}
+          <option {{this.selected}}>{{this.value}}</option>
+          {{/each}}
         </select>
         <label>Venue</label>
         <input type="text" id="venue" name="venue" value="{{match.venue}}" placeholder="e.g. MetLife Stadium, New York" />
