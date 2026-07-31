@@ -76,9 +76,15 @@ export async function removeMatch(req, res) {
 }
 
 export async function getEditPage(req, res) {
-    res.render('match/edit');
-}
+    const matchId = req.params.matchId;
+    const userId = req.user.id;
 
-export async function editMatch(req, res) {
+    const match = await matchService.getById(matchId);
+    const isOwner = match.userId === userId;
 
+    if (!isOwner) {
+        return res.status(403).render('404', { error: 'You are not authorized to edit this match' });
+    }
+
+    res.render('match/edit', { match });
 }

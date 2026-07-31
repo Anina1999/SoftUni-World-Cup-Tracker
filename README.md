@@ -87,3 +87,5 @@
 ## Edit Match
 - [x] Add isAuth to Edit Page
 - [x] Add Edit Page with pre-filled form fields
+- [x] Fetch match data in getEditPage controller
+- [ ] Add editMatch POST route and logic
