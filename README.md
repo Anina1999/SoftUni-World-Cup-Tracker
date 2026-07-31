@@ -67,6 +67,7 @@
 - [x] Render Dynamic Details Page
 - [x] Show Edit, Delete buttons in Details Page if owner
 - [x] Display Like button on logged in user who is not owner
+- [x] Add number of likes count
 
 ## Dynamic Navigation
 - [x] Show dynamic navigation based on user session

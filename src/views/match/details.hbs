@@ -3,7 +3,7 @@
     <div id="details-wrapper">
       <p id="details-title">{{match.homeTeam}} vs {{match.awayTeam}}</p>
       <div id="img-wrapper">
-        <img src="/images/match1.webp" alt="Match" />
+        <img src="{{match.imageUrl}}" alt="Match" />
       </div>
       <div id="info-wrapper">
         <table>
@@ -33,6 +33,10 @@
         <p>
           <strong>Match Report</strong>
           <span id="details-description">{{match.description}}</span>
+        </p>
+        <p>
+          <strong>Likes</strong>
+          <span id="details-likes">{{likesCount}}</span>
         </p>
       </div>
       <div id="action-buttons">

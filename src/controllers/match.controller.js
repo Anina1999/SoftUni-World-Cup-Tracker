@@ -37,9 +37,10 @@ export async function showDetailsPage(req, res) {
     }
 
     const isOwner = match.userId === userId;
-    const hasLiked = match.likedBy.some(user => user.id === userId)
+    const hasLiked = match.likedBy.some(user => user.id === userId);
+    const likesCount = match.likedBy.length
 
-    res.render('match/details', { match, isOwner, hasLiked });
+    res.render('match/details', { match, isOwner, hasLiked, likesCount });
 }
 
 export async function hitLike(req, res) {
