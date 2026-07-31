@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { authController, homeController, matchController } from './controllers/index.js';
+import { apiController, authController, homeController, matchController } from './controllers/index.js';
 import { isAuth, isGuest } from "./middlewares/auth.middleware.js";
 
 const routes = Router();
@@ -26,5 +26,7 @@ routes.get('/match/:matchId/edit', isAuth, matchController.getEditPage);
 routes.post('/match/:matchId/edit', isAuth, matchController.updateMatch);
 
 routes.get('/match/:matchId/delete', isAuth, matchController.removeMatch);
+
+routes.get('/matches/top-scored', apiController.getReportPage);
 
 export default routes;

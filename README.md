@@ -91,3 +91,8 @@
 - [x] Fetch match data in getEditPage controller
 - [x] Add Update Function in match service
 - [x] Add editMatch POST route and logic
+
+# REST API Endpoints
+- [x] Create Api Controller
+- [x] Add route for top scored matches
+- [x] Render Report Page with hardcoded data
