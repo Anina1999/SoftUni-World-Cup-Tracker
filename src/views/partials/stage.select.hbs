@@ -1,0 +1,6 @@
+<select id="stage" name="stage">
+    <option value="">Select stage...</option>
+    {{#each stageOptions}}
+    <option {{this.selected}}>{{this.value}}</option>
+    {{/each}}
+</select>

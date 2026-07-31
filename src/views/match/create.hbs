@@ -12,12 +12,7 @@
         <label>Away Goals</label>
         <input type="number" id="away-goals" name="awayGoals" value="{{match.awayGoals}}" placeholder="0" min="0" />
         <label>Stage</label>
-        <select id="stage" name="stage">
-          <option value="">Select stage...</option>
-          {{#each stageOptions}}
-          <option {{this.selected}}>{{this.value}}</option>
-          {{/each}}
-        </select>
+        {{> stage.select}}
         <label>Venue</label>
         <input type="text" id="venue" name="venue" value="{{match.venue}}" placeholder="e.g. MetLife Stadium, New York" />
         <label>Match Date</label>

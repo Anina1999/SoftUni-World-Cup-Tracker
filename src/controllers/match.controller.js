@@ -11,7 +11,7 @@ export function getMatchPage(req, res) {
 }
 
 function getStageOptions(match = {}) {
-    const stages = ['Group Stage', 'Round of 16', 'Quarter-finals', 'Semi-finals', 'Final']
+    const stages = ['Group Stage', 'Round of 16', 'Quarter-final', 'Semi-final', 'Final']
     
     const options = stages.map(stage => ({
         value: stage,
@@ -95,13 +95,14 @@ export async function getEditPage(req, res) {
     const userId = req.user.id;
 
     const match = await matchService.getById(matchId);
+    const stageOptions = getStageOptions(match);
     const isOwner = match.userId === userId;
 
     if (!isOwner) {
         return res.status(403).render('404', { error: 'You are not authorized to edit this match' });
     }
 
-    res.render('match/edit', { match });
+    res.render('match/edit', { match, stageOptions });
 }
 
 export async function updateMatch(req, res) {
