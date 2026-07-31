@@ -20,6 +20,8 @@ routes.post('/match/create', isAuth, matchController.create);
 routes.get('/match/dashboard', matchController.getDashboardPage);
 
 routes.get('/match/:matchId/details', matchController.showDetailsPage);
-routes.get('/match/:matchId/like', matchController.hitLike);
+routes.get('/match/:matchId/like', isAuth, matchController.hitLike);
+
+routes.get('/match/:matchId/delete', isAuth, matchController.removeMatch);
 
 export default routes;

@@ -80,3 +80,8 @@
 
 ## Home page
 - [x] Render dynamic recent matches
+
+## Delete Match
+- [x] Delete functionality
+
+## Edit Match

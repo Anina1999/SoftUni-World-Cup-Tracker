@@ -39,7 +39,7 @@
         {{#if user}}
           {{#if isOwner}}
           <a href="#" id="edit-btn">✏️ Edit</a>
-          <a href="#" id="delete-btn">🗑️ Delete</a>
+          <a href="/match/{{match.id}}/delete" id="delete-btn">🗑️ Delete</a>
           {{else if hasLiked}}
           <p id="already-liked">⭐ You already liked this match!</p>
           {{else}}

@@ -49,8 +49,17 @@ export function getRecents() {
     //better with createdAt if in schema
     return prisma.match.findMany({
         orderBy: {
-            id: 'desc',
+            createdAt: 'desc',
         },
         take: 3,
+    });
+}
+
+export function removeMatchById(matchId, userId) {
+    return prisma.match.delete({
+        where: {
+            id: matchId,
+            userId
+        }
     });
 }

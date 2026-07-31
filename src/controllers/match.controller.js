@@ -57,3 +57,20 @@ export async function hitLike(req, res) {
     }
 
 }
+
+export async function removeMatch(req, res) {
+    const matchId = req.params.matchId;
+    const userId = req.user.id;
+
+    const match = await matchService.getById(matchId);
+
+    const isOwner = match.userId === userId;
+
+    if (!isOwner) {
+        return res.status(403).render('404', { error: 'You are not authorized to delete this match' });
+    }
+
+    await matchService.removeMatchById(matchId, userId);
+
+    res.redirect('/match/dashboard');
+}
