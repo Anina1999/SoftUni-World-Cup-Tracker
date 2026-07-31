@@ -2,9 +2,9 @@ import * as z from 'zod';
 
 export const createMatchSchema = z.object({
     homeTeam: z.string()
-        .min(1, 'Home team is required'),
+        .min(2, 'Home team is required'),
     awayTeam: z.string()
-        .min(1, 'Away team is required'),
+        .min(2, 'Away team is required'),
     homeGoals: z.coerce.number()
         .int()
         .nonnegative('Home goals is required and nonnegative'),
@@ -15,10 +15,10 @@ export const createMatchSchema = z.object({
         error: 'Stage is required'
     }),
     venue: z.string()
-        .min(1, 'Venue is required'),
+        .min(5, 'Venue is required and must be at least 5 characters long'),
     date: z.string()
         .min(1, 'Date is required'),
     imageUrl: z.string()
-        .url('Image URL must be a valid URL'),
-    description: z.string().min(1, 'Description is required'),
+        .url('Image URL is required and must start with http:// or https://'),
+    description: z.string().min(10, 'Description is required and at least 10 characters long'),
 })
