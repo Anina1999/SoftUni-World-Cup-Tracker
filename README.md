@@ -100,3 +100,4 @@
 - [x] Render Report Page with hardcoded data
 - [x] Connect Report Page to top-scored API (replace hardcoded data)
 - [x] Add error handling to API controller
+- [x] Install and configure CORS for API routes `npm i cors`

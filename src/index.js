@@ -1,6 +1,7 @@
 import express from 'express';
 import { engine } from 'express-handlebars';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 import routes from './routes.js';
 import { authMiddleware } from './middlewares/auth.middleware.js';
 
@@ -15,6 +16,9 @@ app.set('views', 'src/views');
 
 //Setup static files
 app.use(express.static('src/public'));
+
+//Add cors
+app.use(cors());
 
 //Add body parsing middleware
 app.use(express.urlencoded());
