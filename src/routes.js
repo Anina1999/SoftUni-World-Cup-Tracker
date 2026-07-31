@@ -27,6 +27,9 @@ routes.post('/match/:matchId/edit', isAuth, matchController.updateMatch);
 
 routes.get('/match/:matchId/delete', isAuth, matchController.removeMatch);
 
-routes.get('/matches/top-scored', apiController.getReportPage);
+routes.get('/matches/top-scored', matchController.getReportPage);
+
+//API Routes
+routes.get('/api/matches/top-scored', apiController.getApi);
 
 export default routes;

@@ -113,3 +113,9 @@ export async function updateMatch(req, res) {
         return res.status(400).render('match/edit', { err: errorMessage, match: req.body });
     }
 }
+
+export async function getReportPage(req, res) {
+    const topScoredMatches = await matchService.getTopScoredMatches();
+
+    res.render('match/report', { matches: topScoredMatches });
+}

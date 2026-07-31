@@ -73,3 +73,20 @@ export async function update(matchId, matchData, userId) {
     data: matchData,
  })
 }
+
+export async function getTopScoredMatches() {
+    const matches = await prisma.match.findMany({
+        include: {
+            owner: true,
+        }
+    });
+
+    const topScoredMatches = matches.map(match => ({
+            ...match,
+            totalGoals: match.homeGoals + match.awayGoals,
+        }))
+        .sort((a, b) => b.totalGoals - a.totalGoals)
+        .slice(0, 3); 
+
+    return topScoredMatches;
+}

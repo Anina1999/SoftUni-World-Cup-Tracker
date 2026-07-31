@@ -1,7 +1,10 @@
 import { Router } from 'express';
+import { matchService } from '../../services';
 
 const apiController = Router();
 
-export function getReportPage(req, res) {
-    res.render('match/report');
+export async function getApi(req, res) {
+    const topScoredMatches = await matchService.getTopScoredMatches();
+
+    res.json(topScoredMatches);
 }
